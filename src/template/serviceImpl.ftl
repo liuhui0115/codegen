@@ -48,10 +48,10 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
      * @return
 	 */
     @Override
-	public PageInfo<${entityName}Vo> list(${entityName}Dto page) throws Exception{
+	public PageInfo<${entityName}> list(${entityName}Dto page) throws Exception{
 	    PageHelper.startPage(page.getPageNum(), page.getPageSize());
-    	List<${entityName}Vo> list = ${entityName?uncap_first}Dao.list(page);
-    	PageInfo<${entityName}Vo> pageInfo = new PageInfo<${entityName}Vo>(list);
+    	List<${entityName}> list = ${entityName?uncap_first}Dao.list(page);
+    	PageInfo<${entityName}> pageInfo = new PageInfo<${entityName}>(list);
         return pageInfo;
     }
 	
@@ -61,7 +61,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
      * @return
 	 */
     @Override
-	public ${entityName}Vo get(String id) throws Exception{
+	public ${entityName} get(String id) throws Exception{
 		return ${entityName?uncap_first}Dao.get(id);
 	}
 	

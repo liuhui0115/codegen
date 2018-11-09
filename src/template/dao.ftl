@@ -24,14 +24,14 @@ public interface ${entityName}Mapper {
 	 * @param page
      * @return
 	 */
-	List<${entityName}Vo> list(${entityName}Dto ${entityName?uncap_first}Dto);
+	List<${entityName}> list(${entityName}Dto ${entityName?uncap_first}Dto);
 	
 	/**
 	 * 详情
      * @param id
      * @return
 	 */
-	${entityName}Vo get(String id);
+	${entityName} get(String id);
 	
 	/**
 	 * 修改
