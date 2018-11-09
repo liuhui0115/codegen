@@ -15,27 +15,32 @@ import ${entityPackage}.${entityName};
 public interface ${entityName}Mapper {
 	/**
 	 * 新增
+	 * @param ${entityName?uncap_first}
 	 */
-	public void add(${entityName} ${entityName?uncap_first});
+	void add(${entityName} ${entityName?uncap_first});
 
 	/**
 	 * 分页查询
+	 * @param page
 	 */
-	public List<${entityName}> list(PageQueryVo page);
+	List<${entityName}> list(PageQueryVo page);
 	
 	/**
 	 * 详情
+     * @param id
 	 */
-	public ${entityName} get(String id);
+	${entityName} get(String id);
 	
 	/**
 	 * 修改
+	 * @param ${entityName?uncap_first}
 	 */
-	public void mod(${entityName} ${entityName?uncap_first});
+	void mod(${entityName} ${entityName?uncap_first});
 	
 	/**
 	 * 删除
+     * @param id
 	 */
-	public void del(String id);
+	void del(String id);
 	
 }

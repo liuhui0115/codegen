@@ -14,26 +14,31 @@ import ${entityPackage}.${entityName};
 public interface ${entityName}Service {
 	/**
 	 * 新增
+	 * @param ${entityName?uncap_first}
 	 */
 	public void add(${entityName} ${entityName?uncap_first}) throws ServiceException, Exception;
 	
 	/**
 	 * 分页查询
+	 * @param page
 	 */
 	public PageInfo<${entityName}> list(PageQueryVo page) throws ServiceException, Exception;
 	
 	/**
 	 * 详情
+	 * @param id
 	 */
 	public ${entityName} get(String id) throws ServiceException, Exception;
 	
 	/**
 	 * 修改
+	 * @param ${entityName?uncap_first}
 	 */
 	public void mod(${entityName} ${entityName?uncap_first}) throws ServiceException, Exception;
 	
 	/**
 	 * 删除
+	 * @param id
 	 */
 	public void del(String id) throws ServiceException, Exception;
 	

@@ -26,12 +26,14 @@ import ${entityPackage}.${entityName};
 public class ${entityName}ServiceImpl implements ${entityName}Service{
 	/**
 	 * dao
+	 * @param ${entityName?uncap_first}
 	 */
 	@Autowired
 	private ${entityName}Mapper ${entityName?uncap_first}Dao;
 	
 	/**
 	 * 新增
+	 * @param ${entityName?uncap_first}
 	 */
 	public void add(${entityName} ${entityName?uncap_first}) throws ServiceException, Exception{
 		String id = UUID.randomUUID().toString();
@@ -41,6 +43,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	
 	/**
 	 * 分页查询
+	 * @param page
 	 */
 	public PageInfo<${entityName}> list(PageQueryVo page) throws ServiceException, Exception{
 	    PageHelper.startPage(page.getPageNum(), page.getPageSize());
@@ -51,6 +54,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	
 	/**
 	 * 详情
+	 * @param id
 	 */
 	public ${entityName} get(String id) throws ServiceException, Exception{
 		return ${entityName?uncap_first}Dao.get(id);
@@ -58,6 +62,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	
 	/**
 	 * 修改
+	 * @param ${entityName?uncap_first}
 	 */
 	public void mod(${entityName} ${entityName?uncap_first}) throws ServiceException, Exception{
 		${entityName?uncap_first}Dao.mod(${entityName?uncap_first});
@@ -65,6 +70,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	
 	/**
 	 * 删除
+	 * @param id
 	 */
 	public void del(String id) throws ServiceException, Exception{
 		${entityName?uncap_first}Dao.del(id);

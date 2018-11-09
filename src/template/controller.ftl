@@ -40,9 +40,6 @@ public class ${entityName}Controller extends BaseController{
 	@Autowired
 	private ${entityName}Service ${entityName?uncap_first}Service;
 
-	/**
-	 * 新增
-	 */
 	@ApiOperation(value = "新增", httpMethod = BaseConstant.API_POST_METHOD)
 	@PostMapping(value={"/add"})
 	public ApiResult<String> add(${entityName} ${entityName?uncap_first}){

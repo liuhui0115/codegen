@@ -1,7 +1,10 @@
 package com.oneday.codegen.util;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
+import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.StringReader;
 import java.io.StringWriter;
@@ -58,7 +61,9 @@ public class TemplateUtil {
     	System.out.println("生成文件地址："+ outputFileUrl) ;
     	File file = new File(outputFileUrl.substring(0,outputFileUrl.lastIndexOf("/")));
     	file.mkdirs();
-    	Writer writer = new FileWriter(outputFileUrl);
+    	OutputStreamWriter write = new OutputStreamWriter(new FileOutputStream(outputFileUrl),"UTF-8");
+    	BufferedWriter writer=new BufferedWriter(write);
+    	//Writer writer = new FileWriter(outputFileUrl);
     	template.process(data, writer);
     }
     
