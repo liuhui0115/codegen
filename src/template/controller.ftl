@@ -25,11 +25,9 @@ import ${entityPackage}.${entityName};
 import ${servicePackage}.${entityName}Service;
 
 /**
- * 包名:     ${controllerPackage}   
- * 类名:     ${entityName}Controller
- * 描述:     业务调用对象
- * 作者:     ${author}
- * 时间:     ${createTime}
+ * 业务调用对象
+ * @author ${author}
+ * @Date ${createTime}
  */
 @RestController
 @Slf4j
@@ -62,7 +60,7 @@ public class ${entityName}Controller extends BaseController{
 	}
 	
 	@ApiOperation(value = "分页查询", httpMethod = BaseConstant.API_POST_METHOD)
-	@RequestMapping(value = "/list.ajax")
+	@RequestMapping(value = "/list")
 	public ApiResult<PageInfo<${entityName}>> list(PageQueryVo page){
 		PageInfo<${entityName}> rePage = null;
 		try{
@@ -78,7 +76,7 @@ public class ${entityName}Controller extends BaseController{
 	}
 	
 	@ApiOperation(value = "详情", httpMethod = BaseConstant.API_GET_METHOD)
-	@RequestMapping(value = "/get.ajax")
+	@RequestMapping(value = "/get")
 	public ApiResult<${entityName}> get(String id){
 		try {
 			${entityName} data = ${entityName?uncap_first}Service.get(id);
@@ -93,7 +91,7 @@ public class ${entityName}Controller extends BaseController{
 	}
 	
 	@ApiOperation(value = "修改", httpMethod = BaseConstant.API_POST_METHOD)
-	@RequestMapping(value = "/mod.ajax")
+	@RequestMapping(value = "/mod")
 	public ApiResult<String> mod(${entityName} ${entityName?uncap_first}) {
 		try {
 			${entityName?uncap_first}Service.mod(${entityName?uncap_first});
@@ -108,7 +106,7 @@ public class ${entityName}Controller extends BaseController{
 	}
 	
 	@ApiOperation(value = "删除", httpMethod = BaseConstant.API_POST_METHOD)
-	@RequestMapping(value = "/del.ajax")
+	@RequestMapping(value = "/del")
 	public ApiResult<String> del(String ${attributeId}) {
 		try {
 			${entityName?uncap_first}Service.del(${attributeId});

@@ -18,11 +18,9 @@ import ${servicePackage}.${entityName}Service;
 import ${entityPackage}.${entityName};
 
 /**
- * 包名:     ${servicePackage}.impl  
- * 类名:     ${entityName}BizImpl
- * 描述:     业务逻辑实现
- * 作者:     ${author}
- * 时间:     ${createTime}
+ * 业务逻辑实现
+ * @author ${author}
+ * @Date ${createTime}
  */
 @Service("${entityName?uncap_first}Service")
 public class ${entityName}ServiceImpl implements ${entityName}Service{

@@ -14,11 +14,9 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * 包名:     ${entityPackage}   
- * 类名:     ${entityName}
- * 描述:     数据模型
- * 作者:     ${author}
- * 时间:     ${createTime}
+ * 数据模型
+ * @author ${author}
+ * @Date ${createTime}
  */
 @Data
 @Component

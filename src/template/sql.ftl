@@ -2,10 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--
-	类名:     ${entityName}Sql
-	描述:     数据访问语句
-	作者:     ${author}
-	时间:     ${createTime}
+	描述: 数据访问语句
+	作者: ${author}
+	时间: ${createTime}
  -->
 <mapper namespace="${daoPackage}.${entityName}Mapper">
 

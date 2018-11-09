@@ -7,11 +7,9 @@ import com.abel.base.model.condition.PageQueryVo;
 import ${entityPackage}.${entityName};
 
 /**
- * 包名:     ${daoPackage}   
- * 类名:     ${entityName}Mapper 
- * 描述:     数据访问对象
- * 作者:     ${author}
- * 时间:     ${createTime}
+ * 数据访问对象
+ * @author ${author}
+ * @Date ${createTime}
  */
 @Repository
 public interface ${entityName}Mapper {

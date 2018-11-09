@@ -7,11 +7,9 @@ import com.github.pagehelper.PageInfo;
 import ${entityPackage}.${entityName};
 
 /**
- * 包名:     ${servicePackage}   
- * 类名:     ${entityName}Service
- * 描述:     业务逻辑
- * 作者:     ${author}
- * 时间:     ${createTime}
+ * 业务逻辑
+ * @author ${author}
+ * @Date ${createTime}
  */
 public interface ${entityName}Service {
 	/**
