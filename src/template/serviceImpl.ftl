@@ -35,6 +35,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 * 新增
 	 * @param ${entityName?uncap_first}
 	 */
+	@Override
 	public void add(${entityName} ${entityName?uncap_first}) throws ServiceException, Exception{
 		String id = UUID.randomUUID().toString();
 		${entityName?uncap_first}.set${attributeId?cap_first}(id);
@@ -45,6 +46,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 * 分页查询
 	 * @param page
 	 */
+    @Override
 	public PageInfo<${entityName}> list(PageQueryVo page) throws ServiceException, Exception{
 	    PageHelper.startPage(page.getPageNum(), page.getPageSize());
     	List<${entityName}> list = ${entityName?uncap_first}Dao.list(page);
@@ -56,6 +58,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 * 详情
 	 * @param id
 	 */
+    @Override
 	public ${entityName} get(String id) throws ServiceException, Exception{
 		return ${entityName?uncap_first}Dao.get(id);
 	}
@@ -64,6 +67,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 * 修改
 	 * @param ${entityName?uncap_first}
 	 */
+    @Override
 	public void mod(${entityName} ${entityName?uncap_first}) throws ServiceException, Exception{
 		${entityName?uncap_first}Dao.mod(${entityName?uncap_first});
 	}
@@ -72,6 +76,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 * 删除
 	 * @param id
 	 */
+    @Override
 	public void del(String id) throws ServiceException, Exception{
 		${entityName?uncap_first}Dao.del(id);
 	}
