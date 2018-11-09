@@ -45,6 +45,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	/**
 	 * 分页查询
 	 * @param page
+     * @return
 	 */
     @Override
 	public PageInfo<${entityName}> list(PageQueryVo page) throws ServiceException, Exception{
@@ -57,6 +58,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	/**
 	 * 详情
 	 * @param id
+     * @return
 	 */
     @Override
 	public ${entityName} get(String id) throws ServiceException, Exception{

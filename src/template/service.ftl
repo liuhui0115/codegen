@@ -21,12 +21,14 @@ public interface ${entityName}Service {
 	/**
 	 * 分页查询
 	 * @param page
+     * @return
 	 */
 	public PageInfo<${entityName}> list(PageQueryVo page) throws ServiceException, Exception;
 	
 	/**
 	 * 详情
 	 * @param id
+     * @return
 	 */
 	public ${entityName} get(String id) throws ServiceException, Exception;
 	

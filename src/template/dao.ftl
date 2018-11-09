@@ -22,12 +22,14 @@ public interface ${entityName}Mapper {
 	/**
 	 * 分页查询
 	 * @param page
+     * @return
 	 */
 	List<${entityName}> list(PageQueryVo page);
 	
 	/**
 	 * 详情
      * @param id
+     * @return
 	 */
 	${entityName} get(String id);
 	
