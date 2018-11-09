@@ -1,23 +1,27 @@
 ﻿<config>
 	<!-- mysql jdbc-->
 	<dataBaseDrive>com.mysql.jdbc.Driver</dataBaseDrive>
-	<dataBaseConnectStr>jdbc:mysql://10.204.130.209:3810/abel_finance</dataBaseConnectStr>
-	<dataBaseName>abel</dataBaseName>
-	<dataBasePassword>Abel3Huafumi*</dataBasePassword>
+	<dataBaseConnectStr>jdbc:mysql://192.168.1.100:3306/abel_finance</dataBaseConnectStr>
+	<dataBaseName>root</dataBaseName>
+	<dataBasePassword>123456</dataBasePassword>
 	
 	<!-- 表名 -->
-	<tableName>code_gen</tableName>
-	<!-- 实体类名 -->
-	<modelName>CodeGen</modelName>
+	<tableName>sys_function</tableName>
+	<!-- 实体类名，如生成文件名:CodeGen.java、CodeGenMapper.java -->
+	<modelName>Function</modelName>
 	
 	<!-- 实体bean包名-->
-	<entityPackage>com.abel.model.finance</entityPackage>
+	<entityPackage>com.cis.scp.sys.domain</entityPackage>
+	<!-- vo包名-->
+	<voPackage>com.cis.scp.sys.vo</voPackage>
+	<!-- dto包名-->
+	<dtoPackage>com.cis.scp.sys.dto</dtoPackage>
 	<!-- mapper包名-->
-	<daoPackage>com.abel.finance.dao</daoPackage>
+	<daoPackage>com.cis.scp.sys.mapper</daoPackage>
 	<!-- service包名-->
-	<servicePackage>com.abel.finance.service</servicePackage>
+	<servicePackage>com.cis.scp.sys.service</servicePackage>
 	<!-- controller包名-->
-	<controllerPackage>com.abel.finance.controller</controllerPackage> 
+	<controllerPackage>com.cis.scp.sys.controller</controllerPackage> 
 	
 	<!-- 使用模版配置 -->
 	<serviceTemplate>service.ftl</serviceTemplate>
@@ -25,6 +29,8 @@
 	<controllerTemplate>controller.ftl</controllerTemplate>
 	<daoTemplate>dao.ftl</daoTemplate>
 	<entityTemplate>entity.ftl</entityTemplate>
+	<voTemplate>vo.ftl</voTemplate>
+	<dtoTemplate>dto.ftl</dtoTemplate>
 	<sqlTemplate>sql.ftl</sqlTemplate>
 	<daoSuffix>Mapper</daoSuffix>
 	<showSqlFolder>false</showSqlFolder>

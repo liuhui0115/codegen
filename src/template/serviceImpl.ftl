@@ -10,12 +10,12 @@ import java.math.BigDecimal;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.abel.exception.ServiceException;
-import com.abel.base.model.condition.PageQueryVo;
 
 import ${daoPackage}.${entityName}Mapper;
 import ${servicePackage}.${entityName}Service;
 import ${entityPackage}.${entityName};
+import ${dtoPackage}.${entityName}Dto;
+import ${voPackage}.${entityName}Vo;
 
 /**
  * 业务逻辑实现
@@ -36,7 +36,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 * @param ${entityName?uncap_first}
 	 */
 	@Override
-	public void add(${entityName} ${entityName?uncap_first}) throws ServiceException, Exception{
+	public void add(${entityName} ${entityName?uncap_first}) throws Exception{
 		String id = UUID.randomUUID().toString();
 		${entityName?uncap_first}.set${attributeId?cap_first}(id);
 		${entityName?uncap_first}Dao.add(${entityName?uncap_first});
@@ -48,10 +48,10 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
      * @return
 	 */
     @Override
-	public PageInfo<${entityName}> list(PageQueryVo page) throws ServiceException, Exception{
+	public PageInfo<${entityName}Vo> list(${entityName}Dto page) throws Exception{
 	    PageHelper.startPage(page.getPageNum(), page.getPageSize());
-    	List<${entityName}> list = ${entityName?uncap_first}Dao.list(page);
-    	PageInfo<${entityName}> pageInfo = new PageInfo<${entityName}>(list);
+    	List<${entityName}Vo> list = ${entityName?uncap_first}Dao.list(page);
+    	PageInfo<${entityName}Vo> pageInfo = new PageInfo<${entityName}Vo>(list);
         return pageInfo;
     }
 	
@@ -61,7 +61,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
      * @return
 	 */
     @Override
-	public ${entityName} get(String id) throws ServiceException, Exception{
+	public ${entityName}Vo get(String id) throws Exception{
 		return ${entityName?uncap_first}Dao.get(id);
 	}
 	
@@ -70,7 +70,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 * @param ${entityName?uncap_first}
 	 */
     @Override
-	public void mod(${entityName} ${entityName?uncap_first}) throws ServiceException, Exception{
+	public void mod(${entityName} ${entityName?uncap_first}) throws Exception{
 		${entityName?uncap_first}Dao.mod(${entityName?uncap_first});
 	}
 	
@@ -79,7 +79,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 * @param id
 	 */
     @Override
-	public void del(String id) throws ServiceException, Exception{
+	public void del(String id) throws Exception{
 		${entityName?uncap_first}Dao.del(id);
 	}
 	

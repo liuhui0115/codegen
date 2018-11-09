@@ -2,8 +2,8 @@ package ${daoPackage};
 
 import java.util.List;
 import org.springframework.stereotype.Repository;
-import com.abel.base.model.condition.PageQueryVo;
-
+import ${dtoPackage}.${entityName}Dto;
+import ${voPackage}.${entityName}Vo;
 import ${entityPackage}.${entityName};
 
 /**
@@ -24,14 +24,14 @@ public interface ${entityName}Mapper {
 	 * @param page
      * @return
 	 */
-	List<${entityName}> list(PageQueryVo page);
+	List<${entityName}Vo> list(${entityName}Dto ${entityName?uncap_first}Dto);
 	
 	/**
 	 * 详情
      * @param id
      * @return
 	 */
-	${entityName} get(String id);
+	${entityName}Vo get(String id);
 	
 	/**
 	 * 修改

@@ -44,7 +44,7 @@
 	</insert>
 	
 	<!-- 列表 -->
-	<select id="list" parameterType="com.abel.base.model.condition.PageQueryVo" resultMap="baseResultMap">
+	<select id="list" parameterType="${dtoPackage}.${entityName}Dto" resultMap="baseResultMap">
 		select
 		<include refid="baseColumnList" />
 		from ${tableName}

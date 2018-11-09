@@ -30,6 +30,34 @@ public class DaoGen {
 		
 		return null;
 	}
+	
+	/**
+	 * 生成实体类
+	 */
+	public static String genVo(Config config) throws Exception{
+		String fileName = config.getVoPackage().replaceAll("\\.", "/") 
+				+ "/" + config.getEntityName() + "Vo.java";
+		System.out.println("entity文件路径：" + fileName);
+		
+		Map<String, Object> map = config.transToMap();
+		TemplateUtil.getInstance().gen(config.transToMap(), config.getTemplateMap().get("vo"), fileName);
+		
+		return null;
+	}
+	
+	/**
+	 * 生成实体类
+	 */
+	public static String genDto(Config config) throws Exception{
+		String fileName = config.getDtoPackage().replaceAll("\\.", "/") 
+				+ "/" + config.getEntityName() + "Dto.java";
+		System.out.println("entity文件路径：" + fileName);
+		
+		Map<String, Object> map = config.transToMap();
+		TemplateUtil.getInstance().gen(config.transToMap(), config.getTemplateMap().get("dto"), fileName);
+		
+		return null;
+	}
 
 
 	/**

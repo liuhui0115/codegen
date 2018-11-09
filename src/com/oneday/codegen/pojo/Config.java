@@ -32,6 +32,8 @@ public class Config {
 	
 	
 	private String entityPackage;
+	private String voPackage;
+	private String dtoPackage;
 	private String daoPackage;
 	private String servicePackage;
 	private String controllerPackage;
@@ -219,4 +221,21 @@ public class Config {
 	public void setDataBaseType(String dataBaseType) {
 		this.dataBaseType = dataBaseType;
 	}
+
+	public String getVoPackage() {
+		return voPackage;
+	}
+
+	public void setVoPackage(String voPackage) {
+		this.voPackage = voPackage;
+	}
+
+	public String getDtoPackage() {
+		return dtoPackage;
+	}
+
+	public void setDtoPackage(String dtoPackage) {
+		this.dtoPackage = dtoPackage;
+	}
+	
 }

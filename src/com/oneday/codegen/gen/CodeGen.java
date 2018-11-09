@@ -107,6 +107,8 @@ public class CodeGen {
 		config.setEntityName(root.element("modelName").getTextTrim());
 		//package
 		config.setEntityPackage(root.element("entityPackage") == null?null:root.element("entityPackage").getTextTrim());
+		config.setVoPackage(root.element("voPackage") == null?null:root.element("voPackage").getTextTrim());
+		config.setDtoPackage(root.element("dtoPackage") == null?null:root.element("dtoPackage").getTextTrim());
 		config.setDaoPackage(root.element("daoPackage") == null?null:root.element("daoPackage").getTextTrim());
 		config.setServicePackage(root.element("servicePackage") == null?null:root.element("servicePackage").getTextTrim());
 		
@@ -117,6 +119,8 @@ public class CodeGen {
 		templateMap.put("controller", root.element("controllerTemplate").getTextTrim());
 		templateMap.put("dao", root.element("daoTemplate").getTextTrim());
 		templateMap.put("entity", root.element("entityTemplate").getTextTrim());
+		templateMap.put("vo", root.element("voTemplate").getTextTrim());
+		templateMap.put("dto", root.element("dtoTemplate").getTextTrim());
 		templateMap.put("sql", root.element("sqlTemplate").getTextTrim());
 		templateMap.put("daoSuffix", root.element("daoSuffix").getTextTrim());
 		templateMap.put("showSqlFolder", root.element("showSqlFolder").getTextTrim());
@@ -176,6 +180,8 @@ public class CodeGen {
 		if(config.getEntityName() !=null && config.getDaoPackage() != null){
 			DaoGen.genDao(config);
 			DaoGen.genModel(config);
+			DaoGen.genVo(config);
+			DaoGen.genDto(config);
 			DaoGen.genSql(config);
 		}
 		
