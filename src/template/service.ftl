@@ -23,14 +23,14 @@ public interface ${entityName}Service {
 	 * @param page
      * @return
 	 */
-	public PageInfo<${entityName}> list(${entityName}Dto page) throws Exception;
+	public PageInfo<${entityName}Vo> list(${entityName}Dto page) throws Exception;
 	
 	/**
 	 * 详情
 	 * @param id
      * @return
 	 */
-	public ${entityName} get(String id) throws Exception;
+	public ${entityName}Vo get(String id) throws Exception;
 	
 	/**
 	 * 修改

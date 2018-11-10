@@ -1,8 +1,5 @@
 package ${controllerPackage};
 
-import java.util.Map;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.abel.base.controller.BaseController;
 import com.abel.exception.ServiceException;
 import com.abel.base.model.ApiResult;
-import com.abel.base.model.condition.PageQueryVo;
 import com.abel.constants.BaseConstant;
 
 import com.github.pagehelper.PageInfo;
@@ -23,6 +19,7 @@ import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import ${entityPackage}.${entityName};
 import ${dtoPackage}.${entityName}Dto;
+import ${voPackage}.${entityName}Vo;
 import ${servicePackage}.${entityName}Service;
 
 /**
@@ -59,8 +56,8 @@ public class ${entityName}Controller extends BaseController{
 	
 	@ApiOperation(value = "分页查询", httpMethod = BaseConstant.API_POST_METHOD)
 	@RequestMapping(value = "/list")
-	public ApiResult<PageInfo<${entityName}>> list(${entityName}Dto page){
-		PageInfo<${entityName}> rePage = null;
+	public ApiResult<PageInfo<${entityName}Vo>> list(${entityName}Dto page){
+		PageInfo<${entityName}Vo> rePage = null;
 		try{
 			rePage = ${entityName?uncap_first}Service.list(page);
 		}catch (ServiceException e) {
@@ -75,9 +72,9 @@ public class ${entityName}Controller extends BaseController{
 	
 	@ApiOperation(value = "详情", httpMethod = BaseConstant.API_GET_METHOD)
 	@RequestMapping(value = "/get")
-	public ApiResult<${entityName}> get(String id){
+	public ApiResult<${entityName}Vo> get(String id){
 		try {
-			${entityName} data = ${entityName?uncap_first}Service.get(id);
+			${entityName}Vo data = ${entityName?uncap_first}Service.get(id);
 			return success(data);
 		}catch (ServiceException e) {
 			log.error(e.getMessage(), e);
