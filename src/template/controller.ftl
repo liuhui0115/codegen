@@ -72,7 +72,7 @@ public class ${entityName}Controller extends BaseController{
 	
 	@ApiOperation(value = "详情", httpMethod = BaseConstant.API_GET_METHOD)
 	@RequestMapping(value = "/get")
-	public ApiResult<${entityName}Vo> get(String id){
+	public ApiResult<${entityName}Vo> get(Long id){
 		try {
 			${entityName}Vo data = ${entityName?uncap_first}Service.get(id);
 			return success(data);
@@ -102,7 +102,7 @@ public class ${entityName}Controller extends BaseController{
 	
 	@ApiOperation(value = "删除", httpMethod = BaseConstant.API_POST_METHOD)
 	@RequestMapping(value = "/del")
-	public ApiResult<String> del(String ${attributeId}) {
+	public ApiResult<String> del(Long ${attributeId}) {
 		try {
 			${entityName?uncap_first}Service.del(${attributeId});
 		}catch (ServiceException e) {
