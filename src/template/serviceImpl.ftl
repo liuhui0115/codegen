@@ -37,8 +37,8 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 */
 	@Override
 	public void add(${entityName} ${entityName?uncap_first}) throws ServiceException, Exception{
-		String id = UUID.randomUUID().toString();
-		${entityName?uncap_first}.set${attributeId?cap_first}(id);
+		//String id = UUID.randomUUID().toString();
+		${entityName?uncap_first}.set${attributeId?cap_first}(11);
 		${entityName?uncap_first}Dao.add(${entityName?uncap_first});
 	}
 	
