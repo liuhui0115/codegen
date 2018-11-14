@@ -66,9 +66,7 @@
 		<#if columnList?exists> 
 		<#list columnList as item>
 		<#if item.column != columnId>
-		<if test="${item.attribute} != null">
 			, ${item.column} = ${SYMBOL_POUND}{${item.attribute}}
-		</if>
 		</#if>
 		</#list> 
 		</#if>
