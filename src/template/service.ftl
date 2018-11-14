@@ -30,7 +30,7 @@ public interface ${entityName}Service {
 	 * @param id
      * @return
 	 */
-	public ${entityName} get(String id) throws ServiceException, Exception;
+	public ${entityName} get(java.lang.Long id) throws ServiceException, Exception;
 	
 	/**
 	 * 修改
@@ -42,6 +42,6 @@ public interface ${entityName}Service {
 	 * 删除
 	 * @param id
 	 */
-	public void del(String id) throws ServiceException, Exception;
+	public void del(java.lang.Long id) throws ServiceException, Exception;
 	
 }

@@ -54,7 +54,7 @@
 	</select>
 	
 	<!-- 详情 -->
-	<select id="get" parameterType="String" resultMap="baseResultMap">
+	<select id="get" parameterType="java.lang.Long" resultMap="baseResultMap">
 		select 
 		<include refid="baseColumnList"/>
 		from ${tableName} t where ${columnId} = ${SYMBOL_POUND}{${attributeId}}
@@ -66,9 +66,7 @@
 		<#if columnList?exists> 
 		<#list columnList as item>
 		<#if item.column != columnId>
-		<if test="${item.attribute} != null">
 			, ${item.column} = ${SYMBOL_POUND}{${item.attribute}}
-		</if>
 		</#if>
 		</#list> 
 		</#if>
@@ -76,7 +74,7 @@
 	</update> 
 	
 	<!-- 删除 -->
-	<update id="del" parameterType="string">
+	<update id="del" parameterType="java.lang.Long">
 		delete from ${tableName} where ${columnId} = ${SYMBOL_POUND}{${attributeId}}
 	</update>
 </mapper>

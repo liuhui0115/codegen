@@ -31,7 +31,7 @@ public interface ${entityName}Mapper {
      * @param id
      * @return
 	 */
-	${entityName} get(String id);
+	${entityName} get(java.lang.Long id);
 	
 	/**
 	 * 修改
@@ -43,6 +43,6 @@ public interface ${entityName}Mapper {
 	 * 删除
      * @param id
 	 */
-	void del(String id);
+	void del(java.lang.Long id);
 	
 }

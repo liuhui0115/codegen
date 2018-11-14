@@ -61,7 +61,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
      * @return
 	 */
     @Override
-	public ${entityName} get(String id) throws ServiceException, Exception{
+	public ${entityName} get(java.lang.Long id) throws ServiceException, Exception{
 		return ${entityName?uncap_first}Dao.get(id);
 	}
 	
@@ -79,7 +79,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 * @param id
 	 */
     @Override
-	public void del(String id) throws ServiceException, Exception{
+	public void del(java.lang.Long id) throws ServiceException, Exception{
 		${entityName?uncap_first}Dao.del(id);
 	}
 	
