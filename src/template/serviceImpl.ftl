@@ -1,13 +1,10 @@
 package ${servicePackage}.impl;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import java.math.BigDecimal;
 
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,6 +35,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	@Override
 	public void add(${entityName} ${entityName?uncap_first}) throws Exception{
 		String id = UUID.randomUUID().toString();
+		id = id.replace("-", "");
 		${entityName?uncap_first}.set${attributeId?cap_first}(id);
 		${entityName?uncap_first}Dao.add(${entityName?uncap_first});
 	}
@@ -48,10 +46,10 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
      * @return
 	 */
     @Override
-	public PageInfo<${entityName}> list(${entityName}Dto page) throws Exception{
+	public PageInfo<${entityName}Vo> list(${entityName}Dto page) throws Exception{
 	    PageHelper.startPage(page.getPageNum(), page.getPageSize());
-    	List<${entityName}> list = ${entityName?uncap_first}Dao.list(page);
-    	PageInfo<${entityName}> pageInfo = new PageInfo<${entityName}>(list);
+    	List<${entityName}Vo> list = ${entityName?uncap_first}Dao.list(page);
+    	PageInfo<${entityName}Vo> pageInfo = new PageInfo<${entityName}Vo>(list);
         return pageInfo;
     }
 	
@@ -61,7 +59,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
      * @return
 	 */
     @Override
-	public ${entityName} get(String id) throws Exception{
+	public ${entityName}Vo get(String id) throws Exception{
 		return ${entityName?uncap_first}Dao.get(id);
 	}
 	

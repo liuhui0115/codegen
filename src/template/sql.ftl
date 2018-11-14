@@ -8,7 +8,7 @@
  -->
 <mapper namespace="${daoPackage}.${entityName}Mapper">
 
-	<resultMap type="${entityPackage}.${entityName}" id="baseResultMap">
+	<resultMap type="${entityPackage}.${entityName}Vo" id="baseResultMap">
 		<#if columnList?exists> 
 		<#list columnList as item> 
 		<result property="${item.attribute}" column="${item.column}" />
