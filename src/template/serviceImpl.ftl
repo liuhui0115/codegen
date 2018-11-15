@@ -8,6 +8,7 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cis.scp.sys.constant.SystemConstant;
 import com.abel.utils.GenId;
 import ${daoPackage}.${entityName}Mapper;
 import ${servicePackage}.${entityName}Service;
@@ -38,6 +39,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 		${entityName?uncap_first}.setId(GenId.id(${entityName}.class));
 		${entityName?uncap_first}.setCreateTime(new Date());
 		${entityName?uncap_first}.setCreateById(0L);
+		${entityName?uncap_first}.setIsDeleted(SystemConstant.IS_DELETED_NO);
 		${entityName?uncap_first}Dao.add(${entityName?uncap_first});
 	}
 	
