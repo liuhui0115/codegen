@@ -2,6 +2,7 @@ package ${controllerPackage};
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -12,10 +13,7 @@ import com.abel.constants.BaseConstant;
 
 import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import ${entityPackage}.${entityName};
 import ${dtoPackage}.${entityName}Dto;
@@ -40,7 +38,7 @@ public class ${entityName}Controller extends BaseController{
 
 	@ApiOperation(value = "新增", httpMethod = BaseConstant.API_POST_METHOD)
 	@PostMapping(value={"/add"})
-	public ApiResult<String> add(${entityName} ${entityName?uncap_first}){
+	public ApiResult<String> add(@RequestBody ${entityName} ${entityName?uncap_first}){
 		try{
 			${entityName?uncap_first}Service.add(${entityName?uncap_first});
 		}catch (ServiceException e) {
@@ -56,7 +54,7 @@ public class ${entityName}Controller extends BaseController{
 	
 	@ApiOperation(value = "分页查询", httpMethod = BaseConstant.API_POST_METHOD)
 	@RequestMapping(value = "/list")
-	public ApiResult<PageInfo<${entityName}Vo>> list(${entityName}Dto page){
+	public ApiResult<PageInfo<${entityName}Vo>> list(@RequestBody ${entityName}Dto page){
 		PageInfo<${entityName}Vo> rePage = null;
 		try{
 			rePage = ${entityName?uncap_first}Service.list(page);
@@ -87,7 +85,7 @@ public class ${entityName}Controller extends BaseController{
 	
 	@ApiOperation(value = "修改", httpMethod = BaseConstant.API_POST_METHOD)
 	@RequestMapping(value = "/mod")
-	public ApiResult<String> mod(${entityName} ${entityName?uncap_first}) {
+	public ApiResult<String> mod(@RequestBody ${entityName} ${entityName?uncap_first}) {
 		try {
 			${entityName?uncap_first}Service.mod(${entityName?uncap_first});
 		}catch (ServiceException e) {

@@ -1,13 +1,14 @@
 package ${servicePackage}.impl;
 
 import java.util.List;
-import java.util.UUID;
+import java.util.Date;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.abel.utils.GenId;
 import ${daoPackage}.${entityName}Mapper;
 import ${servicePackage}.${entityName}Service;
 import ${entityPackage}.${entityName};
@@ -34,9 +35,9 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 */
 	@Override
 	public void add(${entityName} ${entityName?uncap_first}) throws Exception{
-		String id = UUID.randomUUID().toString();
-		id = id.replace("-", "");
-		${entityName?uncap_first}.set${attributeId?cap_first}(id);
+		${entityName?uncap_first}.setId(GenId.id(${entityName}.class));
+		${entityName?uncap_first}.setCreateTime(new Date());
+		${entityName?uncap_first}.setCreateById(0L);
 		${entityName?uncap_first}Dao.add(${entityName?uncap_first});
 	}
 	
@@ -69,6 +70,8 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 */
     @Override
 	public void mod(${entityName} ${entityName?uncap_first}) throws Exception{
+		${entityName?uncap_first}.setUpdateById(0L);
+		${entityName?uncap_first}.setUpdateTime(new Date());
 		${entityName?uncap_first}Dao.mod(${entityName?uncap_first});
 	}
 	
