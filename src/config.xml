@@ -1,9 +1,9 @@
 ﻿<config>
 	<!-- mysql jdbc-->
 	<dataBaseDrive>com.mysql.jdbc.Driver</dataBaseDrive>
-	<dataBaseConnectStr>jdbc:mysql://192.168.1.100:3306/abel_finance</dataBaseConnectStr>
-	<dataBaseName>root</dataBaseName>
-	<dataBasePassword>123456</dataBasePassword>
+	<dataBaseConnectStr>jdbc:mysql://172.16.16.8:3306/scp</dataBaseConnectStr>
+	<dataBaseName>scp</dataBaseName>
+	<dataBasePassword>Zx-18116</dataBasePassword>
 	
 	<!-- 表名 -->
 	<tableName>sys_function</tableName>
