@@ -10,6 +10,7 @@ import com.abel.base.controller.BaseController;
 import com.abel.exception.ServiceException;
 import com.abel.base.model.ApiResult;
 import com.abel.constants.BaseConstant;
+import com.abel.base.model.dto.BaseDto;
 
 import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.Api;
@@ -100,9 +101,9 @@ public class ${entityName}Controller extends BaseController{
 	
 	@ApiOperation(value = "删除", httpMethod = BaseConstant.API_POST_METHOD)
 	@RequestMapping(value = "/del")
-	public ApiResult<String> del(Long ${attributeId}) {
+	public ApiResult<String> del(@RequestBody BaseDto baseDto) {
 		try {
-			${entityName?uncap_first}Service.del(${attributeId});
+			${entityName?uncap_first}Service.del(baseDto.getId());
 		}catch (ServiceException e) {
 			log.error(e.getMessage(), e);
 			return fail(e.getMessage());

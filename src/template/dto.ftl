@@ -20,7 +20,6 @@ import lombok.Data;
  * @Date ${createTime}
  */
 @Data
-@Component
 @ApiModel("${tableComment}")
 public class ${entityName}Dto extends BasePageQuery{
 	<#if columnList?exists> 

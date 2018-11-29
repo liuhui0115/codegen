@@ -19,7 +19,6 @@ import lombok.Data;
  * @Date ${createTime}
  */
 @Data
-@Component
 @ApiModel("${tableComment}")
 public class ${entityName}Vo{
 	<#if columnList?exists> 
