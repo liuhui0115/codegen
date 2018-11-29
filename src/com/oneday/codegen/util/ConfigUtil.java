@@ -190,8 +190,8 @@ public class ConfigUtil<T> {
 					.getType().indexOf("decimal") >= 0 ? "BigDecimal" : c
 					.getType().indexOf("varchar") >= 0 ? "String" : c
 					.getType().indexOf("date") >= 0 ? "Date" : c
-					.getType().indexOf("timestamp") >= 0 ? "Date" : c
-					.getType().substring(0, 8).equals("datetime") ? "Date"
+					.getType().indexOf("timestamp") >= 0 ? "Date" : 
+					(c.getType().length() >= 8 && c.getType().substring(0, 8).equals("datetime")) ? "Date"
 					: "String";
 			c.setAttributeType(atrributeType);
 			if("YES".equalsIgnoreCase(c.getNullAble())){
