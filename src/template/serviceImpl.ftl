@@ -9,7 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cis.scp.sys.constant.SystemConstant;
-import com.abel.utils.GenId;
+import com.abel.utils.IdUtils;
+import com.cis.scp.sys.utils.UserUtil;
 import ${daoPackage}.${entityName}Mapper;
 import ${servicePackage}.${entityName}Service;
 import ${entityPackage}.${entityName};
@@ -36,9 +37,9 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 */
 	@Override
 	public void add(${entityName} ${entityName?uncap_first}){
-		${entityName?uncap_first}.setId(GenId.id(${entityName}.class));
+		${entityName?uncap_first}.setId(IdUtils.genIdBySnowflake());
 		${entityName?uncap_first}.setCreateTime(new Date());
-		${entityName?uncap_first}.setCreateById(0L);
+		${entityName?uncap_first}.setCreateById(UserUtil.getUserId());
 		${entityName?uncap_first}.setIsDeleted(SystemConstant.IS_DELETED_NO);
 		${entityName?uncap_first}Dao.add(${entityName?uncap_first});
 	}
@@ -62,7 +63,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
      * @return
 	 */
     @Override
-	public ${entityName}Vo get(String id){
+	public ${entityName}Vo get(Long id){
 		return ${entityName?uncap_first}Dao.get(id);
 	}
 	
@@ -72,7 +73,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 */
     @Override
 	public void mod(${entityName} ${entityName?uncap_first}){
-		${entityName?uncap_first}.setUpdateById(0L);
+		${entityName?uncap_first}.setUpdateById(UserUtil.getUserId());
 		${entityName?uncap_first}.setUpdateTime(new Date());
 		${entityName?uncap_first}Dao.mod(${entityName?uncap_first});
 	}
@@ -82,7 +83,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 * @param id
 	 */
     @Override
-	public void del(String id){
+	public void del(Long id){
 		${entityName?uncap_first}Dao.del(id);
 	}
 	

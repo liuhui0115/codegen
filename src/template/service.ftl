@@ -30,7 +30,7 @@ public interface ${entityName}Service {
 	 * @param id
      * @return
 	 */
-	${entityName}Vo get(String id);
+	${entityName}Vo get(Long id);
 	
 	/**
 	 * 修改
@@ -42,6 +42,6 @@ public interface ${entityName}Service {
 	 * 删除
 	 * @param id
 	 */
-	void del(String id);
+	void del(Long id);
 	
 }
