@@ -16,32 +16,32 @@ public interface ${entityName}Service {
 	 * 新增
 	 * @param ${entityName?uncap_first}
 	 */
-	public void add(${entityName} ${entityName?uncap_first}) throws Exception;
+	void add(${entityName} ${entityName?uncap_first});
 	
 	/**
 	 * 分页查询
 	 * @param page
      * @return
 	 */
-	public PageInfo<${entityName}Vo> list(${entityName}Dto page) throws Exception;
+	PageInfo<${entityName}Vo> list(${entityName}Dto page);
 	
 	/**
 	 * 详情
 	 * @param id
      * @return
 	 */
-	public ${entityName}Vo get(String id) throws Exception;
+	${entityName}Vo get(String id);
 	
 	/**
 	 * 修改
 	 * @param ${entityName?uncap_first}
 	 */
-	public void mod(${entityName} ${entityName?uncap_first}) throws Exception;
+	void mod(${entityName} ${entityName?uncap_first});
 	
 	/**
 	 * 删除
 	 * @param id
 	 */
-	public void del(String id) throws Exception;
+	void del(String id);
 	
 }

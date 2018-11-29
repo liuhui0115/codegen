@@ -33,7 +33,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 * @param ${entityName?uncap_first}
 	 */
 	@Override
-	public void add(${entityName} ${entityName?uncap_first}) throws Exception{
+	public void add(${entityName} ${entityName?uncap_first}){
 		String id = UUID.randomUUID().toString();
 		id = id.replace("-", "");
 		${entityName?uncap_first}.set${attributeId?cap_first}(id);
@@ -46,7 +46,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
      * @return
 	 */
     @Override
-	public PageInfo<${entityName}Vo> list(${entityName}Dto page) throws Exception{
+	public PageInfo<${entityName}Vo> list(${entityName}Dto page){
 	    PageHelper.startPage(page.getPageNum(), page.getPageSize());
     	List<${entityName}Vo> list = ${entityName?uncap_first}Dao.list(page);
     	PageInfo<${entityName}Vo> pageInfo = new PageInfo<${entityName}Vo>(list);
@@ -59,7 +59,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
      * @return
 	 */
     @Override
-	public ${entityName}Vo get(String id) throws Exception{
+	public ${entityName}Vo get(String id){
 		return ${entityName?uncap_first}Dao.get(id);
 	}
 	
@@ -68,7 +68,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 * @param ${entityName?uncap_first}
 	 */
     @Override
-	public void mod(${entityName} ${entityName?uncap_first}) throws Exception{
+	public void mod(${entityName} ${entityName?uncap_first}){
 		${entityName?uncap_first}Dao.mod(${entityName?uncap_first});
 	}
 	
@@ -77,7 +77,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	 * @param id
 	 */
     @Override
-	public void del(String id) throws Exception{
+	public void del(String id){
 		${entityName?uncap_first}Dao.del(id);
 	}
 	
