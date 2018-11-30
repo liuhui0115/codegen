@@ -1,4 +1,4 @@
-  package ${dtoPackage};
+package ${dtoPackage};
 
 
 import java.util.Date;
