@@ -8,7 +8,7 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cis.scp.sys.constant.SystemConstant;
+import com.abel.constants.BaseConstant;
 import com.abel.utils.IdUtils;
 import com.cis.scp.sys.utils.UserUtil;
 import ${daoPackage}.${entityName}Mapper;
@@ -40,7 +40,7 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 		${entityName?uncap_first}.setId(IdUtils.genIdBySnowflake());
 		${entityName?uncap_first}.setCreateTime(new Date());
 		${entityName?uncap_first}.setCreateById(UserUtil.getUserId());
-		${entityName?uncap_first}.setIsDeleted(SystemConstant.IS_DELETED_NO);
+		${entityName?uncap_first}.setIsDeleted(BaseConstant.IS_DELETED_NO);
 		${entityName?uncap_first}Dao.add(${entityName?uncap_first});
 	}
 	

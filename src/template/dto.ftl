@@ -1,4 +1,4 @@
-package ${dtoPackage};
+  package ${dtoPackage};
 
 
 import java.util.Date;
@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 
 import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.cis.scp.sys.dto.BasePageQuery;
+import com.abel.base.model.condition.PageQueryVo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -21,7 +21,7 @@ import lombok.Data;
  */
 @Data
 @ApiModel("${tableComment}")
-public class ${entityName}Dto extends BasePageQuery{
+public class ${entityName}Dto extends PageQueryVo{
 	<#if columnList?exists> 
 	<#list columnList as item> 
 	
