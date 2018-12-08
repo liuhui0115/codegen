@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--
-	描述: 数据访问语句
+	描述: 数据访问语句-${tableComment}
 	作者: ${author}
 	时间: ${createTime}
  -->

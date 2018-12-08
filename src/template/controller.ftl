@@ -22,7 +22,7 @@ import ${voPackage}.${entityName}Vo;
 import ${servicePackage}.${entityName}Service;
 
 /**
- * 业务调用对象
+ * 业务调用对象-${tableComment}
  * @author ${author}
  * @Date ${createTime}
  */

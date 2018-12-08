@@ -18,7 +18,7 @@ import ${dtoPackage}.${entityName}Dto;
 import ${voPackage}.${entityName}Vo;
 
 /**
- * 业务逻辑实现
+ * 业务逻辑实现-${tableComment}
  * @author ${author}
  * @Date ${createTime}
  */

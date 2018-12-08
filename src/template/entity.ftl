@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * 数据模型
+ * 数据模型-${tableComment}
  * @author ${author}
  * @Date ${createTime}
  */

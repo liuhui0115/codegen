@@ -7,7 +7,7 @@ import ${entityPackage}.${entityName};
 import ${voPackage}.${entityName}Vo;
 
 /**
- * 业务逻辑
+ * 业务逻辑-${tableComment}
  * @author ${author}
  * @Date ${createTime}
  */
