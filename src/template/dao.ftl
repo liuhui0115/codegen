@@ -2,6 +2,7 @@ package ${daoPackage};
 
 import java.util.List;
 import org.springframework.stereotype.Repository;
+import com.abel.base.model.dto.QueryDto;
 import ${dtoPackage}.${entityName}Dto;
 import ${voPackage}.${entityName}Vo;
 import ${entityPackage}.${entityName};
@@ -24,7 +25,7 @@ public interface ${entityName}Mapper {
 	 * @param page
      * @return
 	 */
-	List<${entityName}Vo> list(${entityName}Dto ${entityName?uncap_first}Dto);
+	List<${entityName}Vo> list(QueryDto<${entityName}Dto> page);
 	
 	/**
 	 * 详情

@@ -1,27 +1,27 @@
 ﻿<config>
 	<!-- mysql jdbc-->
 	<dataBaseDrive>com.mysql.jdbc.Driver</dataBaseDrive>
-	<dataBaseConnectStr>jdbc:mysql://172.16.16.8:3306/scp</dataBaseConnectStr>
+	<dataBaseConnectStr>jdbc:mysql://172.16.16.8:3306/scp_biz</dataBaseConnectStr>
 	<dataBaseName>scp</dataBaseName>
 	<dataBasePassword>Zx-18116</dataBasePassword>
 	
 	<!-- 表名 -->
-	<tableName>sys_function</tableName>
+	<tableName>tms_logistics_notice</tableName>
 	<!-- 实体类名，如生成文件名:CodeGen.java、CodeGenMapper.java -->
-	<modelName>Function</modelName>
+	<modelName>LogisticsNotice</modelName>
 	
 	<!-- 实体bean包名-->
-	<entityPackage>com.cis.scp.sys.domain</entityPackage>
+	<entityPackage>com.cis.abel.scp.tms.domain</entityPackage>
 	<!-- vo包名-->
-	<voPackage>com.cis.scp.sys.vo</voPackage>
+	<voPackage>com.cis.abel.scp.tms.vo</voPackage>
 	<!-- dto包名-->
-	<dtoPackage>com.cis.scp.sys.dto</dtoPackage>
+	<dtoPackage>com.cis.abel.scp.tms.dto</dtoPackage>
 	<!-- mapper包名-->
-	<daoPackage>com.cis.scp.sys.mapper</daoPackage>
+	<daoPackage>com.cis.abel.scp.tms.mapper</daoPackage>
 	<!-- service包名-->
-	<servicePackage>com.cis.scp.sys.service</servicePackage>
+	<servicePackage>com.cis.abel.scp.tms.service</servicePackage>
 	<!-- controller包名-->
-	<controllerPackage>com.cis.scp.sys.controller</controllerPackage> 
+	<controllerPackage>com.cis.abel.scp.tms.controller</controllerPackage> 
 	
 	<!-- 使用模版配置 -->
 	<serviceTemplate>service.ftl</serviceTemplate>

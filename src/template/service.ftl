@@ -2,7 +2,7 @@ package ${servicePackage};
 
 import ${dtoPackage}.${entityName}Dto;
 import com.github.pagehelper.PageInfo;
-
+import com.abel.base.model.dto.QueryDto;
 import ${entityPackage}.${entityName};
 import ${voPackage}.${entityName}Vo;
 
@@ -23,7 +23,7 @@ public interface ${entityName}Service {
 	 * @param page
      * @return
 	 */
-	PageInfo<${entityName}Vo> list(${entityName}Dto page);
+	PageInfo<${entityName}Vo> list(QueryDto<${entityName}Dto> page);
 	
 	/**
 	 * 详情

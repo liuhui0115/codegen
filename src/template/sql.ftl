@@ -16,16 +16,6 @@
 		</#if>
 	</resultMap>
 	
-	<sql id="baseWhereClause">
-		<where>
-			<!--
-			1 = 1
-			<if test="params['exampleName'] != null and  params['exampleName'] != ''">
-				and example_name = ${SYMBOL_POUND}{params.exampleName}
-			</if>
-			-->
-		</where>
-	</sql>
 	<sql id="baseColumnList">
 		${columns}
 	</sql>
@@ -44,11 +34,16 @@
 	</insert>
 	
 	<!-- 列表 -->
-	<select id="list" parameterType="${dtoPackage}.${entityName}Dto" resultMap="baseResultMap">
+	<select id="list" parameterType="com.abel.base.model.dto.QueryDto" resultMap="baseResultMap">
 		select
 		<include refid="baseColumnList" />
 		from ${tableName}
 		where is_deleted = 0
+		<!--
+		<if test="data['exampleName'] != null and data['exampleName'] != ''">
+			and example_name = ${SYMBOL_POUND}{data.exampleName}
+		</if>
+		-->
 	</select>
 	
 	<!-- 详情 -->

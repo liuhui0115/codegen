@@ -2,11 +2,8 @@ package ${entityPackage};
 
 
 import java.util.Date;
-import org.apache.commons.lang.StringUtils;
-import java.io.Serializable;
 import java.math.BigDecimal;
 
-import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import io.swagger.annotations.ApiModel;
