@@ -40,7 +40,7 @@
 		from ${tableName}
 		where is_deleted = 0
 		<!--
-		<if test="data['exampleName'] != null and data['exampleName'] != ''">
+		<if test="data != null and data.exampleName != null and data.exampleName != ''">
 			and example_name = ${SYMBOL_POUND}{data.exampleName}
 		</if>
 		-->
