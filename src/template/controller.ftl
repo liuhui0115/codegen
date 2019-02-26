@@ -40,8 +40,8 @@ public class ${entityName}Controller extends BaseController{
 
 	@ApiOperation(value = "新增", httpMethod = BaseConstant.API_POST_METHOD)
 	@PostMapping(value={"/add"})
-	public ApiResult<String> add(@RequestBody ${entityName} ${entityName?uncap_first}){
-		${entityName?uncap_first}Service.add(${entityName?uncap_first});
+	public ApiResult<String> add(@RequestBody ${entityName}Dto ${entityName?uncap_first}Dto){
+		${entityName?uncap_first}Service.add(${entityName?uncap_first}Dto);
 		
 		return success("新增成功");
 	}
@@ -62,8 +62,8 @@ public class ${entityName}Controller extends BaseController{
 	
 	@ApiOperation(value = "修改", httpMethod = BaseConstant.API_POST_METHOD)
 	@RequestMapping(value = "/mod")
-	public ApiResult<String> mod(@RequestBody ${entityName} ${entityName?uncap_first}) {
-		${entityName?uncap_first}Service.mod(${entityName?uncap_first});
+	public ApiResult<String> mod(@RequestBody ${entityName}Dto ${entityName?uncap_first}Dto) {
+		${entityName?uncap_first}Service.mod(${entityName?uncap_first}Dto);
 		return success("更新成功");
 	}
 	

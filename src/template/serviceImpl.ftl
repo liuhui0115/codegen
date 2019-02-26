@@ -34,15 +34,15 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	
 	/**
 	 * 新增
-	 * @param ${entityName?uncap_first}
+	 * @param ${entityName?uncap_first}Dto
 	 */
 	@Override
-	public void add(${entityName} ${entityName?uncap_first}){
-		${entityName?uncap_first}.setId(IdUtils.genIdBySnowflake());
-		${entityName?uncap_first}.setCreateTime(new Date());
-		${entityName?uncap_first}.setCreateById(UserUtil.getUserId());
-		${entityName?uncap_first}.setIsDeleted(BaseConstant.IS_DELETED_NO);
-		${entityName?uncap_first}Mapper.add(${entityName?uncap_first});
+	public void add(${entityName}Dto ${entityName?uncap_first}Dto){
+		${entityName?uncap_first}Dto.setId(IdUtils.genIdBySnowflake());
+		${entityName?uncap_first}Dto.setCreateTime(new Date());
+		${entityName?uncap_first}Dto.setCreateById(UserUtil.getUserId());
+		${entityName?uncap_first}Dto.setIsDeleted(BaseConstant.IS_DELETED_NO);
+		${entityName?uncap_first}Mapper.add(${entityName?uncap_first}Dto);
 	}
 	
 	/**
@@ -70,13 +70,13 @@ public class ${entityName}ServiceImpl implements ${entityName}Service{
 	
 	/**
 	 * 修改
-	 * @param ${entityName?uncap_first}
+	 * @param ${entityName?uncap_first}Dto
 	 */
     @Override
-	public void mod(${entityName} ${entityName?uncap_first}){
-		${entityName?uncap_first}.setUpdateById(UserUtil.getUserId());
-		${entityName?uncap_first}.setUpdateTime(new Date());
-		${entityName?uncap_first}Mapper.mod(${entityName?uncap_first});
+	public void mod(${entityName}Dto ${entityName?uncap_first}Dto){
+		${entityName?uncap_first}Dto.setUpdateById(UserUtil.getUserId());
+		${entityName?uncap_first}Dto.setUpdateTime(new Date());
+		${entityName?uncap_first}Mapper.mod(${entityName?uncap_first}Dto);
 	}
 	
 	/**

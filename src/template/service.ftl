@@ -14,9 +14,9 @@ import ${voPackage}.${entityName}Vo;
 public interface ${entityName}Service {
 	/**
 	 * 新增
-	 * @param ${entityName?uncap_first}
+	 * @param ${entityName?uncap_first}Dto
 	 */
-	void add(${entityName} ${entityName?uncap_first});
+	void add(${entityName}Dto ${entityName?uncap_first}Dto);
 	
 	/**
 	 * 分页查询
@@ -34,9 +34,9 @@ public interface ${entityName}Service {
 	
 	/**
 	 * 修改
-	 * @param ${entityName?uncap_first}
+	 * @param ${entityName?uncap_first}Dto
 	 */
-	void mod(${entityName} ${entityName?uncap_first});
+	void mod(${entityName}Dto ${entityName?uncap_first}Dto);
 	
 	/**
 	 * 删除
