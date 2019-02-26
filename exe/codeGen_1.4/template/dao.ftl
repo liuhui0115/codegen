@@ -8,7 +8,7 @@ import ${voPackage}.${entityName}Vo;
 import ${entityPackage}.${entityName};
 
 /**
- * 数据访问对象
+ * 数据访问对象-${tableComment}
  * @author ${author}
  * @Date ${createTime}
  */
