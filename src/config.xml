@@ -1,27 +1,27 @@
 ﻿<config>
 	<!-- mysql jdbc-->
 	<dataBaseDrive>com.mysql.jdbc.Driver</dataBaseDrive>
-	<dataBaseConnectStr>jdbc:mysql://rm-wz9l0lo155366i168.mysql.rds.aliyuncs.com:3306/scp_biz_test</dataBaseConnectStr>
-	<dataBaseName>scp_test</dataBaseName>
-	<dataBasePassword>Zx-18116</dataBasePassword>
+	<dataBaseConnectStr>jdbc:mysql://rm-wz9l0lo155366i168.mysql.rds.aliyuncs.com:3306/scp_biz_dev</dataBaseConnectStr>
+	<dataBaseName>scp_dev</dataBaseName>
+	<dataBasePassword>Zx190308</dataBasePassword>
 	
 	<!-- 表名 -->
-	<tableName>bas_principal_project</tableName>
+	<tableName>sms_cost_pool</tableName>
 	<!-- 实体类名，如生成文件名:CodeGen.java、CodeGenMapper.java -->
-	<modelName>PrincipalProject</modelName>
+	<modelName>CostPool</modelName>
 	
 	<!-- 实体bean包名-->
-	<entityPackage>com.cis.abel.scp.bas.domain</entityPackage>
+	<entityPackage>com.cis.abel.scp.sms.domain</entityPackage>
 	<!-- vo包名-->
-	<voPackage>com.cis.abel.scp.bas.vo</voPackage>
+	<voPackage>com.cis.abel.scp.sms.vo</voPackage>
 	<!-- dto包名-->
-	<dtoPackage>com.cis.abel.scp.bas.dto</dtoPackage>
+	<dtoPackage>com.cis.abel.scp.sms.dto</dtoPackage>
 	<!-- mapper包名-->
-	<daoPackage>com.cis.abel.scp.bas.mapper</daoPackage>
+	<daoPackage>com.cis.abel.scp.sms.mapper</daoPackage>
 	<!-- service包名-->
-	<servicePackage>com.cis.abel.scp.bas.service</servicePackage>
+	<servicePackage>com.cis.abel.scp.sms.service</servicePackage>
 	<!-- controller包名-->
-	<controllerPackage>com.cis.abel.scp.bas.controller</controllerPackage> 
+	<controllerPackage>com.cis.abel.scp.sms.controller</controllerPackage> 
 	
 	<!-- 使用模版配置 -->
 	<serviceTemplate>service.ftl</serviceTemplate>
